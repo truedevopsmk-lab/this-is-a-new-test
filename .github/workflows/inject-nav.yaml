@@ -1,0 +1,83 @@
+name: Inject Navigation Menu
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # REQUIRED for auto-commit to work
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Build Navigation Menu
+        id: nav
+        shell: bash
+        run: |
+          echo "Building navigation menu..."
+
+          NAV="## 📘 Navigation Menu\n"
+
+          # Repo name for GitHub Pages URL
+          REPO_NAME=$(basename "$GITHUB_REPOSITORY")
+
+          while IFS= read -r -d '' readme; do
+            folder=$(dirname "$readme")
+
+            # Skip root README
+            if [[ "$folder" == "." ]]; then
+              NAV+="[🏠 Home](https://$GITHUB_REPOSITORY_OWNER.github.io/$REPO_NAME/) • "
+              continue
+            fi
+
+            # Pretty label
+            base=$(basename "$folder")
+            pretty=$(echo "$base" | sed 's/-/ /g')
+
+            # Encode spaces manually
+            encoded="${folder// /%20}"
+
+            # Add entry
+            NAV+="[$pretty](https://$GITHUB_REPOSITORY_OWNER.github.io/$REPO_NAME/$encoded/) • "
+
+          done < <(find . -type f -name "README.md" -print0)
+
+          NAV+="\n\n---\n<!-- inject-nav -->"
+
+          {
+            echo "nav<<EOF"
+            echo -e "$NAV"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+
+      - name: Inject Navigation into README files
+        shell: bash
+        run: |
+          NAV="${{ steps.nav.outputs.nav }}"
+
+          while IFS= read -r -d '' file; do
+
+            # Skip if nav already present
+            if grep -q "<!-- inject-nav -->" "$file"; then
+              echo "Skipping $file (already injected)"
+              continue
+            fi
+
+            echo "Injecting into $file"
+            tmp=$(mktemp)
+            echo -e "$NAV" > "$tmp"
+            cat "$file" >> "$tmp"
+            mv "$tmp" "$file"
+
+          done < <(find . -type f -name "README.md" -print0)
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-injected nav menu"

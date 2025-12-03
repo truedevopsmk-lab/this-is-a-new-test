@@ -1,3 +1,8 @@
+## 📘 Navigation Menu
+[December Travel Option](https://truedevopsmk-lab.github.io/this-is-a-new-test/./December%20Travel%20Option/) • [🏠 Home](https://truedevopsmk-lab.github.io/this-is-a-new-test/) • [Budapest](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Budapest/) • [Attractions, Cafés & Local Specialties](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Attractions,%20Cafés%20&%20Local%20Specialties/) • [Trip Packing Checklist](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Trip%20Packing%20Checklist/) • [Budapest Plan](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Budapest-Plan/) • [Comparison Nov vs Dec Dates](https://truedevopsmk-lab.github.io/this-is-a-new-test/./Comparison%20Nov%20vs%20Dec%20Dates/) • 
+
+---
+<!-- inject-nav -->
 # 🇭🇺 Budapest – 2.5 Day Itinerary (Perfect for Christmas Season)
 
 This itinerary is designed for a short 2.5-day trip to Budapest during winter, focusing on the **best views**, **Christmas markets**, **iconic landmarks**, and **relaxed walking routes** — while **skipping time-consuming museums and interior visits**.

@@ -1,3 +1,8 @@
+## 📘 Navigation Menu
+[December Travel Option](https://truedevopsmk-lab.github.io/this-is-a-new-test/./December%20Travel%20Option/) • [🏠 Home](https://truedevopsmk-lab.github.io/this-is-a-new-test/) • [Budapest](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Budapest/) • [Attractions, Cafés & Local Specialties](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Attractions,%20Cafés%20&%20Local%20Specialties/) • [Trip Packing Checklist](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Trip%20Packing%20Checklist/) • [Budapest Plan](https://truedevopsmk-lab.github.io/this-is-a-new-test/./untitled%20folder/Budapest-Plan/) • [Comparison Nov vs Dec Dates](https://truedevopsmk-lab.github.io/this-is-a-new-test/./Comparison%20Nov%20vs%20Dec%20Dates/) • 
+
+---
+<!-- inject-nav -->
 Nice — here’s a tight, practical **2.5-day Budapest plan** that fits your *Top-15* hits while **skipping time-heavy interiors/museums**. I assume you arrive **~12:35 Day 0**, clear airport, and can start exploring ~15:00. If your arrival is later or you feel jet-lagged, trim Day-0 slightly.
 
 I give (A) a high-level plan per half/full day, (B) a timed walkable schedule you can follow, and (C) quick tips (tickets, transport, priorities). Let’s go.
